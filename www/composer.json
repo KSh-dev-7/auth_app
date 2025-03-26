@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Core\\": "/var/www/public_html/Core",
+      "Http\\": "/var/www/public_html/Http"
+    }
+  }
+}
