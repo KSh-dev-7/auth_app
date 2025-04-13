@@ -16,7 +16,6 @@ if($form->validate($email, $password)) {
     $auth = new Authenticator();
     if($auth->attempt($email, $password)) {
         $_SESSION["user"]["name"] = $user["name"];
-        $_SESSION["user"]["email"] = $user["email"];
         redirect("/");
     } else {
         setValidationError("login", "Wrong email or password.");
