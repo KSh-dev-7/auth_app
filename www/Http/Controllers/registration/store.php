@@ -64,8 +64,6 @@ if(!empty($_SESSION["validation"]))
     redirect("/register");
 }
 
-$avatarPath = $uploadPath . "/" . $fileName;
-
 $db->query("INSERT INTO users (name, email, password, avatar) VALUES (?, ?, ?, ?)", [$name, $email, password_hash($password, PASSWORD_DEFAULT), "uploads/" . $fileName]);
 
 redirect("/login");
