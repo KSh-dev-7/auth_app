@@ -11,7 +11,7 @@ class Authenticator
         if(!$user || !password_verify($password, $user["password"])) {
             return false;
         }
-        $this->login($user);
+        self::login($user);
         return true;
     }
 
